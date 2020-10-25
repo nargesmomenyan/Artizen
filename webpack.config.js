@@ -9,7 +9,7 @@ module.exports={
          
      },
      mode:'none',
-     watch: false,
+     watch: true,
      watchOptions: {
         ignored: ['node_modules/**']
       },
