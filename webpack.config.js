@@ -9,6 +9,10 @@ module.exports={
          
      },
      mode:'none',
+     watch: true,
+     watchOptions: {
+        ignored: ['node_modules/**']
+      },
      module:{
          rules:[
          {
