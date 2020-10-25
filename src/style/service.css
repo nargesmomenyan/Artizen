@@ -1,0 +1,67 @@
+html,
+body {
+    height: 100%;
+    direction: rtl;
+}
+
+.main__container {
+    background-color: white;
+}
+
+.service__box__main {
+    height: 630px;
+    position: relative;
+    background-color: rgba(235, 5, 5, 0.788);
+    margin-top: 200px;
+}
+
+.service__section {
+    height: 826px;
+    background-color: rgba(7, 0, 0, 0.808);
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.service__box {
+    flex-direction: row;
+    height: 202px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    top: -20vh;
+    padding-left: 63px;
+    padding-right: 63px;
+}
+
+.service__box__item {
+    width: 202px;
+    height: 100%;
+    box-shadow: 0 2px 4px 0 rgba(#000, 0.2), 0 3px 10px 0 rgba(#000, 0.08);
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 16px/36px IRANSansWebFaNum;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    text-align: center;
+    font: normal normal normal 16px/36px IRANSansWebFaNum;
+    letter-spacing: 0px;
+    color: #0048DE;
+    opacity: 1;
+}
+
+.service__box__item__active {
+    width: 202px;
+    height: 202px;
+    background: #0048DE 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 20px #00000029;
+    border-radius: 12px;
+    opacity: 1;
+    color: #FFFFFF;
+}
+
+.item__text {
+    font-size: 14px;
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+    margin-top: 5px;
+}
