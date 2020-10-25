@@ -2,9 +2,12 @@
  const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports={
-     entry:"./src/scripts/index.js",
+     entry:{
+        'indexFile': "./src/scripts/index.js",
+        'lottery': "./src/scripts/lottery.js"
+        },
      output:{
-         filename:'bundle.js',
+         filename:'[name].[contenthash].js',
          path: path.resolve( __dirname ,'./dist'),
          
      },
@@ -38,6 +41,17 @@ module.exports={
                     presets:['@babel/env']
                 }
             }
+        },{
+            test:/\.(ttf|woff|woff2)$/,
+            use:[
+                {
+                    loader:'file-loader',
+                    options:{
+                        name: '[name].[ext]',
+                        outputPath:'fonts/'
+                    }
+                }
+            ]
         }
          ]
          

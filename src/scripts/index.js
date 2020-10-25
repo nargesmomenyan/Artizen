@@ -1,9 +1,5 @@
 
-import sample from './1.js'
-import addImg from './add-img.js'
+import '../../asset/_iransans.scss'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
-sample()
-
-addImg()
+import '../style/index.scss'
