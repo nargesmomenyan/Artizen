@@ -1,0 +1,17 @@
+@import 'iransans';
+
+html{
+    body{
+        font-family: IRANSans;
+        font-weight: 300;
+    }
+}
+
+$image-size:400px;
+
+.img-anar{
+    width: $image-size;
+}
+.test-font{
+    font-family: IRANSans;
+}

@@ -1,14 +1,15 @@
  const path = require('path')
  const TerserPlugin = require('terser-webpack-plugin')
+ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+ const CleanWebpackPlugin = require('clean-webpack-plugin')
+ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports={
-     entry:{
-        'indexFile': "./src/scripts/index.js",
-        'lottery': "./src/scripts/lottery.js"
-        },
+     entry:"./src/scripts/index.js",
      output:{
-         filename:'[name].[contenthash].js',
+         filename:'bundle.[contenthash].js',
          path: path.resolve( __dirname ,'./dist'),
+         publicPath: 'dist/'
          
      },
      mode:'none',
@@ -19,18 +20,18 @@ module.exports={
      module:{
          rules:[
          {
-            test: /\.(jpg|JPG|jpeg|png|gif|mp3|svg|ttf|woff2|woff|eot)$/gi,
+            test: /\.(jpg|JPG|jpeg|png|gif|mp3|svg)$/gi,
              use:[
                  'file-loader'
                 ]
          },
          {
              test:/\.css$/,
-             use:['style-loader', 'css-loader' ]
+             use:[MiniCssExtractPlugin.loader, 'css-loader' ]
          },
          {
             test:/\.scss$/,
-            use:['style-loader', 'css-loader','sass-loader' ]
+            use:[MiniCssExtractPlugin.loader, 'css-loader','sass-loader' ]
         },
         {
             test:/\.js$/,
@@ -42,10 +43,10 @@ module.exports={
                 }
             }
         },{
-            test:/\.(ttf|woff|woff2)$/,
+            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
             use:[
                 {
-                    loader:'file-loader',
+                    loader:'url-loader',
                     options:{
                         name: '[name].[ext]',
                         outputPath:'fonts/'
@@ -57,6 +58,11 @@ module.exports={
          
      },
      plugins:[
-         new TerserPlugin()
+         new TerserPlugin(),
+         new MiniCssExtractPlugin({
+             filename:"styles.[contenthash].css"
+         }),
+         new CleanWebpackPlugin(),
+         new HtmlWebpackPlugin ()
      ]
 }

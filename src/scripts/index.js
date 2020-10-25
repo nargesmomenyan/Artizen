@@ -1,5 +1,5 @@
 
-import '../../asset/_iransans.scss'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '../style/index.scss'
+import '../style/_iransans.scss'
+import '../style/main.scss'
