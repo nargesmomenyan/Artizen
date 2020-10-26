@@ -1,9 +1,3 @@
-html,
-body {
-    height: 100%;
-    direction: rtl;
-}
-
 .main__container {
     background-color: white;
 }
