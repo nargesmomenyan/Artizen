@@ -100,7 +100,7 @@ a.nav_item {
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
-  padding-left: 24px !important; }
+  padding-left: 1.5rem !important; }
 
 .nav_item:hover {
   cursor: pointer;
@@ -117,12 +117,6 @@ a.nav_item {
   letter-spacing: 0px;
   color: #666666;
   opacity: 1; }
-
-.img-anar {
-  width: 400px; }
-
-.test-font {
-  font-family: IRANSans; }
 
 .footer {
   width: 100%;
