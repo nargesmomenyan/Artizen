@@ -118,6 +118,10 @@ a.nav_item {
   color: #666666;
   opacity: 1; }
 
+.test-img {
+  height: auto;
+  width: 100%; }
+
 .footer {
   width: 100%;
   min-height: 160px;
@@ -185,10 +189,15 @@ a.nav_item {
 .about__image__background {
   width: 100%;
   height: auto;
-  position: relative; }
+  max-height: 320px;
+  position: absolute; }
 
 .about__image__overlay {
+  position: relative;
+  z-index: 2;
   max-height: 320px;
+  height: auto;
+  width: 100%;
   background-color: #0048DE;
   opacity: 89%;
   direction: rtl;
