@@ -9,7 +9,7 @@
     width: 100%;
     height: auto;
     max-height: 320px;
-    position: absolute;
+    position: relative;
     // width: 100%;
     // min-height: 320px;
     // background-repeat: no-repeat;
@@ -20,10 +20,7 @@
 }
 
 .about__image__overlay {
-    position: relative;
-    z-index: 2;
     max-height: 320px;
-    height: auto;
     width: 100%;
     background-color: #0048DE;
     opacity: 89%;
@@ -63,7 +60,61 @@
     margin-top: 16px;
 }
 
-.abount__arrow__more img {
+.about__arrow__more img {
     width: 24px;
     height: 24px;
+}
+
+.about__art__body {
+    width: 100%;
+    // margin-left: 175px;
+    // margin-right: 175px;
+    height: 535px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+.about__art__body__item {
+    width: 50%;
+    height: 100%;
+}
+
+.about__art__body__item__header__text {
+    font-size: 40px;
+    color: #000000;
+    text-align: right;
+    font-weight: bold;
+}
+
+.about__art__body__item__header__text__art {
+    font-size: 27px;
+    color: #000000;
+    text-align: right;
+    font-weight: lighter;
+    margin-top: 18px;
+}
+
+.about__art__body__item__text {
+    font-size: 14px;
+    width: 471px;
+    color: #666666;
+    text-align: right;
+    margin-top: 21px;
+    line-height: 32px;
+}
+
+.about__art__body__item__number {
+    width: 341px;
+    // margin-left: 175px;
+    // margin-right: 175px;
+    height: 179px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 39px;
 }
