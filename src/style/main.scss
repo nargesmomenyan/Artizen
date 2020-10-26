@@ -4,8 +4,26 @@ html{
     body{
         font-family: IRANSans;
         font-weight: 300;
+            direction: rtl;
     }
 }
+
+a.nav_item {
+    text-decoration: none;
+}
+.nav_item {
+    color: black;
+    min-width: 100px;
+    text-align: center;
+}
+.nav_item:hover {
+    cursor: pointer;
+    color: blue;
+}
+.dropdown-menu {
+    min-width: 100px !important;
+}
+
 
 $image-size:400px;
 

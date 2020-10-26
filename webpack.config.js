@@ -7,7 +7,7 @@
 module.exports={
      entry:"./src/scripts/index.js",
      output:{
-         filename:'bundle.[contenthash].js',
+         filename:'bundle.js',
          path: path.resolve( __dirname ,'./dist'),
          publicPath: ''
          
@@ -66,7 +66,7 @@ module.exports={
      plugins:[
          new TerserPlugin(),
          new MiniCssExtractPlugin({
-             filename:"styles.[contenthash].css"
+             filename:"styles.css"
          }),
          new CleanWebpackPlugin(),
          new HtmlWebpackPlugin ({
